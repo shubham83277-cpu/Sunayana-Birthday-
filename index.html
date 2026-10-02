@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Sunayana ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:#fff;background:radial-gradient(circle at 20% 20%,#552080,transparent 30%),radial-gradient(circle at 80% 30%,#8b2358,transparent 30%),linear-gradient(135deg,#090018,#260018);min-height:100vh;overflow-x:hidden}
+section{min-height:100vh;padding:60px 18px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+.content{width:100%;max-width:850px;position:relative;z-index:2}
+h1,.script{font-family:'Dancing Script',cursive}
+h1{font-size:clamp(60px,15vw,110px);background:linear-gradient(90deg,#fff,#ff9fca,#fff);-webkit-background-clip:text;color:transparent}
+.name{font-family:'Dancing Script',cursive;font-size:clamp(65px,15vw,115px)}
+.sub{opacity:.85;line-height:1.7}
+.card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(18px);border-radius:30px;padding:30px 22px;box-shadow:0 20px 60px #0005}
+.btn{border:0;border-radius:50px;padding:14px 25px;margin:18px 5px;background:linear-gradient(90deg,#ff477e,#ff85ab);color:white;font-weight:600;font-size:16px;cursor:pointer}
+.music{position:fixed;top:15px;right:15px;z-index:20;width:48px;height:48px;border:0;border-radius:50%;background:#ffffff22;color:white;font-size:20px}
+.gift{width:150px;height:130px;margin:45px auto 20px;position:relative;cursor:pointer;animation:bounce 1.8s infinite}
+.box{position:absolute;bottom:0;left:15px;width:120px;height:85px;background:linear-gradient(135deg,#ff477e,#c2185b)}
+.box:before{content:"";position:absolute;left:48px;width:25px;height:85px;background:#ffd166}
+.lid{position:absolute;top:25px;left:5px;width:140px;height:30px;background:#ff5c8a;border-radius:5px;z-index:2;transition:1s}
+.gift.open .lid{transform:translateY(-70px) rotate(-8deg)}
+.ribbon{position:absolute;left:60px;top:-5px;width:25px;height:45px;border:6px solid #ffd166;border-radius:50%;z-index:3}
+@keyframes bounce{50%{transform:translateY(-12px)}}
+#birthday{display:none}
+.big{font-family:'Dancing Script',cursive;font-size:clamp(55px,13vw,100px);color:#ffb3d1;text-shadow:0 0 30px #ff4d8d}
+.cake{font-size:100px;margin:25px}
+.letter{font-family:'Dancing Script',cursive;text-align:left;font-size:23px;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:20px;border:2px solid #ffffff33;box-shadow:0 10px 30px #0004}
+@media(max-width:500px){.gallery img{height:220px}.letter{font-size:20px}}
+.heart{position:fixed;bottom:-40px;z-index:10;pointer-events:none;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<button class="music" onclick="toggleMusic()">🎵</button>
+<audio id="music" loop><source src="song.mp3" type="audio/mpeg"></audio>
+
+<section id="intro">
+<div class="content">
+<p>✨ I made something special for you ✨</p>
+<h1>For Sunayana</h1>
+<p class="sub">There is a little surprise waiting for you...</p>
+<div class="gift" id="gift" onclick="openGift()"><div class="lid"></div><div class="box"></div><div class="ribbon"></div></div>
+<p class="sub">🎁 Tap the gift to open it</p>
+</div>
+</section>
+
+<section id="birthday">
+<div class="content">
+<div class="big">Happy Birthday</div>
+<div class="name">Sunayana ❤️</div>
+<p>🎂 6 October 🎂</p>
+<div class="cake">🎂</div>
+<button class="btn" onclick="go('letter')">💌 Read Your Letter</button>
+</div>
+</section>
+
+<section id="letter">
+<div class="content">
+<div class="card">
+<h2 class="script" style="font-size:45px;color:#ffb3d1">My Dear Sunayana ❤️</h2>
+<div class="letter">
+<p>Happy Birthday, beautiful! ❤️</p>
+<p>Make a wish, and just know that you are my wish come true.</p>
+<p>On your special day, I want you to know how special you are to me. Your smile can make my worst day better, and having you in my life is something I will always be grateful for.</p>
+<p>I hope this new year of your life brings you endless happiness, beautiful memories, success and everything your heart wishes for.</p>
+<p>And I hope I get to celebrate many more birthdays with you. ❤️</p>
+<p style="text-align:right;margin-top:20px">Forever yours,<br><b>Shubham ❤️</b></p>
+</div>
+</div>
+<button class="btn" onclick="go('memories')">📸 Our Memories</button>
+</div>
+</section>
+
+<section id="memories">
+<div class="content">
+<div class="card">
+<h2 class="script" style="font-size:50px;color:#ffb3d1">Beautiful Sunayana ❤️</h2>
+<p class="sub">A little collection of memories just for you.</p>
+<div class="gallery">
+<img src="sunayana1.jpg"><img src="sunayana2.jpg">
+<img src="sunayana3.jpg"><img src="sunayana4.jpg">
+<img src="sunayana5.jpg"><img src="sunayana6.jpg">
+</div>
+<button class="btn" onclick="go('question')">💖 One Question...</button>
+</div>
+</div>
+</section>
+
+<section id="question">
+<div class="content">
+<div class="card">
+<h2 class="script" style="font-size:55px;color:#ffb3d1">Sunayana... ❤️</h2>
+<p style="font-size:21px;margin-top:15px">Do you love me? 🥺💕</p>
+<button class="btn" onclick="answer()">❤️ Yes</button>
+<button class="btn" onclick="answer()">💕 Of course</button>
+<p id="answer" class="script" style="font-size:32px;color:#ffb3d1;margin-top:20px"></p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="content">
+<div class="card">
+<div class="script" style="font-size:75px;color:#ffb3d1">Happy Birthday<br>My Love ❤️</div>
+<p class="sub" style="margin-top:20px">You are my wish come true.</p>
+<p class="script" style="font-size:35px;margin-top:20px">With all my love,<br>Shubham ❤️</p>
+<button class="btn" onclick="celebrate()">🎉 Make It Rain Hearts</button>
+</div>
+</div>
+</section>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function openGift(){
+ document.getElementById('gift').classList.add('open');
+ setTimeout(()=>{document.getElementById('intro').style.display='none';document.getElementById('birthday').style.display='flex';go('birthday');celebrateSmall()},850);
+}
+function heart(){
+ const h=document.createElement('div');h.className='heart';
+ h.textContent=['❤️','💕','💗','💖','💘','💝'][Math.floor(Math.random()*6)];
+ h.style.left=Math.random()*100+'vw';h.style.fontSize=(15+Math.random()*28)+'px';h.style.animationDuration=(4+Math.random()*5)+'s';
+ document.body.appendChild(h);setTimeout(()=>h.remove(),9000)
+}
+setInterval(heart,600);
+function celebrateSmall(){for(let i=0;i<40;i++)setTimeout(heart,i*60)}
+function celebrate(){for(let i=0;i<150;i++)setTimeout(heart,i*20)}
+function answer(){document.getElementById('answer').innerHTML='I knew it! 🥹❤️<br><br>Then I am the luckiest guy in the world. 💕';celebrate()}
+let playing=false;
+function toggleMusic(){
+ const m=document.getElementById('music'),b=document.querySelector('.music');
+ if(!playing){m.play().then(()=>{playing=true;b.textContent='⏸️'}).catch(()=>alert('Please add your song as song.mp3 in this folder first.'))}
+ else{m.pause();playing=false;b.textContent='🎵'}
+}
+</script>
+</body>
+</html>
